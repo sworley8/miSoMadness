@@ -4,8 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "GameFramework/Character.h"
+#include "GameFramework/PlayerStart.h"
 #include "SpawnVolume.generated.h"
+
 
 UCLASS()
 class MISOMADNESS_API ASpawnVolume : public AActor
@@ -27,20 +28,19 @@ public:
 	// whereToSpawn getter method
 	FORCEINLINE class UBoxComponent* getWhereToSpawn() const { return whereToSpawn; }
 
-	void spawnCharacter();
+	void createPlayerStart();
 
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Spawning", Meta = (AllowPrivateAccess = "True"))
-	class UBoxComponent *whereToSpawn;
-
-	UPROPERTY(EditAnywhere, Category = "Spawning")
-	TSubclassOf<class ACharacter> whatToSpawn;
+		class UBoxComponent *whereToSpawn;
 
 	UPROPERTY(EditAnywhere)
-	float spawnLocationYRange;
+		float spawnLocationXRange;
+	UPROPERTY(EditAnywhere)
+		float spawnLocationYRange;
 
-
+	int32 playerNum;
 	FVector spawnLocation;
-
+	TSet<FVector> spawnLocationsSet;
 };
