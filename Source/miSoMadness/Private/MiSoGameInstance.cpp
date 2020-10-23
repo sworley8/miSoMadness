@@ -71,8 +71,14 @@ void UMiSoGameInstance::HostServer()
 	sessionSettings.bAllowJoinInProgress = true;
 	sessionSettings.bIsDedicated = false;
 	sessionSettings.bShouldAdvertise = true;
-	//need to change to false for steam stuff
-	sessionSettings.bIsLANMatch = true;
+	if (IOnlineSubsystem::Get()->GetSubsystemName() != "NULL")
+	{
+		UE_LOG(LogTemp, Warning, TEXT("SteamHostWorks"));
+		sessionSettings.bIsLANMatch = false;
+	}
+	else {
+		sessionSettings.bIsLANMatch = true;
+	}
 	sessionSettings.bUsesPresence = true;
 	sessionSettings.NumPublicConnections = 5;
 	SessionInterface->CreateSession(0, FName("MySession"), sessionSettings);
@@ -82,7 +88,14 @@ void UMiSoGameInstance::JoinServer()
 {
 	UE_LOG(LogTemp, Warning, TEXT("CreateServer"));
 	SessionSearch = MakeShareable(new FOnlineSessionSearch());
-	SessionSearch->bIsLanQuery = true;
+	if (IOnlineSubsystem::Get()->GetSubsystemName() != "NULL")
+	{
+		UE_LOG(LogTemp, Warning, TEXT("SteamJoinWorks"));
+		SessionSearch->bIsLanQuery = false;
+	}
+	else {
+		SessionSearch->bIsLanQuery = true;
+	}
 	SessionSearch->MaxSearchResults = 10000;
 	SessionSearch->QuerySettings.Set(SEARCH_PRESENCE, true, EOnlineComparisonOp::Equals);
 	SessionInterface->FindSessions(0, SessionSearch.ToSharedRef());
