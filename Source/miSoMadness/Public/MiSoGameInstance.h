@@ -7,6 +7,20 @@
 #include "Interfaces/OnlineSessionInterface.h"
 #include "MiSoGameInstance.generated.h"
 
+
+USTRUCT(BlueprintType)
+struct FCreateServerInfo
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(BlueprintReadWrite)
+		FString serverName;
+	UPROPERTY(BlueprintReadWrite)
+		FString hostName;
+	UPROPERTY(BlueprintReadWrite)
+		bool isLan;
+};
+
 USTRUCT(BlueprintType)
 struct FServerInfo
 {
@@ -20,6 +34,10 @@ public:
 		FString playerCount;
 	UPROPERTY(BlueprintReadOnly)
 		int32 serverArrIndex;
+	UPROPERTY(BlueprintReadOnly)
+		bool isLan;
+	UPROPERTY(BlueprintReadOnly)
+		int32 ping;
 
 	void setPlayerCount()
 	{
@@ -60,7 +78,7 @@ protected:
 	virtual void OnJoinSessionComplete(FName SessionName, EOnJoinSessionCompleteResult::Type result);
 
 	UFUNCTION(BlueprintCallable)
-		void HostServer(FString ServerName, FString HostName);
+		void HostServer(FCreateServerInfo createServerInfo);
 	UFUNCTION(BlueprintCallable)
 		void FindServerList();
 	UFUNCTION(BlueprintCallable)

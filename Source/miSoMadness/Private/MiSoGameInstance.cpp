@@ -56,6 +56,8 @@ void UMiSoGameInstance::OnFindSessionComplete(bool isSuccessful)
 			serverInfo.currPlayers = result.Session.NumOpenPublicConnections;
 			serverInfo.serverArrIndex = arrIndex;
 			serverInfo.setPlayerCount();
+			serverInfo.isLan = result.Session.SessionSettings.bIsLANMatch;
+			serverInfo.ping = result.PingInMs;
 
 			serverListDel.Broadcast(serverInfo);
 			++arrIndex;
@@ -84,14 +86,14 @@ void UMiSoGameInstance::OnJoinSessionComplete(FName SessionName, EOnJoinSessionC
 	}
 }
 
-void UMiSoGameInstance::HostServer(FString ServerName, FString HostName)
+void UMiSoGameInstance::HostServer(FCreateServerInfo createServerInfo)
 {
 	UE_LOG(LogTemp, Warning, TEXT("CreateServer"));
 	FOnlineSessionSettings sessionSettings;
 	sessionSettings.bAllowJoinInProgress = true;
 	sessionSettings.bIsDedicated = false;
 	sessionSettings.bShouldAdvertise = true;
-	if (IOnlineSubsystem::Get()->GetSubsystemName() != "NULL")
+	if (IOnlineSubsystem::Get()->GetSubsystemName() != "NULL" && !createServerInfo.isLan)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("SteamHostWorks"));
 		sessionSettings.bIsLANMatch = false;
@@ -100,10 +102,10 @@ void UMiSoGameInstance::HostServer(FString ServerName, FString HostName)
 		sessionSettings.bIsLANMatch = true;
 	}
 	sessionSettings.bUsesPresence = true;
-	sessionSettings.NumPublicConnections = 5;
+	sessionSettings.NumPublicConnections = 1000;
 
-	sessionSettings.Set(FName("SERVER_NAME_KEY"), ServerName, EOnlineDataAdvertisementType::ViaOnlineServiceAndPing);
-	sessionSettings.Set(FName("SERVER_HOST_KEY"), HostName, EOnlineDataAdvertisementType::ViaOnlineServiceAndPing);
+	sessionSettings.Set(FName("SERVER_NAME_KEY"), createServerInfo.serverName, EOnlineDataAdvertisementType::ViaOnlineServiceAndPing);
+	sessionSettings.Set(FName("SERVER_HOST_KEY"), createServerInfo.hostName, EOnlineDataAdvertisementType::ViaOnlineServiceAndPing);
 	SessionInterface->CreateSession(0, MySessionName, sessionSettings);
 }
 
