@@ -8,7 +8,7 @@
 
 UMiSoGameInstance::UMiSoGameInstance()
 {
-
+	MySessionName = FName("MySession");
 }
 void UMiSoGameInstance::Init()
 {
@@ -25,7 +25,7 @@ void UMiSoGameInstance::Init()
 	}
 }
 
-void UMiSoGameInstance::OnCreateSessionComplete(FName ServerName, bool isSuccessful)
+void UMiSoGameInstance::OnCreateSessionComplete(FName SessionName, bool isSuccessful)
 {
 	UE_LOG(LogTemp, Warning, TEXT("OnCreateSessionComplete, Success: %d"), isSuccessful);
 	if (isSuccessful)
@@ -36,16 +36,36 @@ void UMiSoGameInstance::OnCreateSessionComplete(FName ServerName, bool isSuccess
 
 void UMiSoGameInstance::OnFindSessionComplete(bool isSuccessful)
 {
+	SearchForServer.Broadcast(false);
 	UE_LOG(LogTemp, Warning, TEXT("OnFindSessionComplete, Success: %d"), isSuccessful);
 	if (isSuccessful)
 	{
-		TArray<FOnlineSessionSearchResult> SearchResult = SessionSearch->SearchResults;
-		UE_LOG(LogTemp, Warning, TEXT("SearchResult, Sever Count: %d"), SearchResult.Num());
-		if (SearchResult.Num())
+		int8 arrIndex = 0;
+		for (FOnlineSessionSearchResult result : SessionSearch->SearchResults)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Joining Server"));
-			SessionInterface->JoinSession(0, "MySession", SearchResult[0]);
+			if (!result.IsValid())
+			{
+				continue;
+			}
+			FServerInfo serverInfo;
+			FString ServerName = "Testing Server Name";
+			FString HostName = "Testing Host Name";
+			result.Session.SessionSettings.Get(FName("SERVER_NAME_KEY"), ServerName);
+			result.Session.SessionSettings.Get(FName("SERVER_HOST_KEY"), HostName);
+			serverInfo.serverName = ServerName;
+			serverInfo.currPlayers = result.Session.NumOpenPublicConnections;
+			serverInfo.serverArrIndex = arrIndex;
+			serverInfo.setPlayerCount();
+
+			serverListDel.Broadcast(serverInfo);
+			++arrIndex;
 		}
+		UE_LOG(LogTemp, Warning, TEXT("SearchResult, Sever Count: %d"), SessionSearch->SearchResults.Num());
+		// if (SessionSearch->SearchResults.Num())
+		// {
+		// 	UE_LOG(LogTemp, Warning, TEXT("Joining Server"));
+		// 	// SessionInterface->JoinSession(0, "MySession", SearchResult[0]);
+		// }
 
 	}
 }
@@ -64,7 +84,7 @@ void UMiSoGameInstance::OnJoinSessionComplete(FName SessionName, EOnJoinSessionC
 	}
 }
 
-void UMiSoGameInstance::HostServer()
+void UMiSoGameInstance::HostServer(FString ServerName, FString HostName)
 {
 	UE_LOG(LogTemp, Warning, TEXT("CreateServer"));
 	FOnlineSessionSettings sessionSettings;
@@ -81,12 +101,16 @@ void UMiSoGameInstance::HostServer()
 	}
 	sessionSettings.bUsesPresence = true;
 	sessionSettings.NumPublicConnections = 5;
-	SessionInterface->CreateSession(0, FName("MySession"), sessionSettings);
+
+	sessionSettings.Set(FName("SERVER_NAME_KEY"), ServerName, EOnlineDataAdvertisementType::ViaOnlineServiceAndPing);
+	sessionSettings.Set(FName("SERVER_HOST_KEY"), HostName, EOnlineDataAdvertisementType::ViaOnlineServiceAndPing);
+	SessionInterface->CreateSession(0, MySessionName, sessionSettings);
 }
 
-void UMiSoGameInstance::JoinServer()
+void UMiSoGameInstance::FindServerList()
 {
-	UE_LOG(LogTemp, Warning, TEXT("CreateServer"));
+	SearchForServer.Broadcast(true);
+	UE_LOG(LogTemp, Warning, TEXT("FindServerList"));
 	SessionSearch = MakeShareable(new FOnlineSessionSearch());
 	if (IOnlineSubsystem::Get()->GetSubsystemName() != "NULL")
 	{
@@ -99,5 +123,24 @@ void UMiSoGameInstance::JoinServer()
 	SessionSearch->MaxSearchResults = 10000;
 	SessionSearch->QuerySettings.Set(SEARCH_PRESENCE, true, EOnlineComparisonOp::Equals);
 	SessionInterface->FindSessions(0, SessionSearch.ToSharedRef());
+
+}
+
+void UMiSoGameInstance::JoinServerList(int32 arrayIndex)
+{
+	FOnlineSessionSearchResult result = SessionSearch->SearchResults[arrayIndex];
+	if (result.IsValid())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Join Server Works: %d"), arrayIndex);
+		SessionInterface->JoinSession(0, MySessionName, result);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Join Server Not Works: %d"), arrayIndex);
+	}
+}
+
+void UMiSoGameInstance::HostGameStart()
+{
 
 }
