@@ -30,7 +30,8 @@ void UMiSoGameInstance::OnCreateSessionComplete(FName SessionName, bool isSucces
 	UE_LOG(LogTemp, Warning, TEXT("OnCreateSessionComplete, Success: %d"), isSuccessful);
 	if (isSuccessful)
 	{
-		GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/RunMap?listen");
+		UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
+		//GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/RunMap?listen");
 	}
 }
 
