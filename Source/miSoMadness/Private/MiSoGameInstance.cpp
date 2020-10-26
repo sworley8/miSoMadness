@@ -30,8 +30,8 @@ void UMiSoGameInstance::OnCreateSessionComplete(FName SessionName, bool isSucces
 	UE_LOG(LogTemp, Warning, TEXT("OnCreateSessionComplete, Success: %d"), isSuccessful);
 	if (isSuccessful)
 	{
-		UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
-		//GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/RunMap?listen");
+		//UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
+		GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/RunMap?listen");
 	}
 }
 
@@ -54,6 +54,7 @@ void UMiSoGameInstance::OnFindSessionComplete(bool isSuccessful)
 			result.Session.SessionSettings.Get(FName("SERVER_NAME_KEY"), ServerName);
 			result.Session.SessionSettings.Get(FName("SERVER_HOST_KEY"), HostName);
 			serverInfo.serverName = ServerName;
+			UE_LOG(LogTemp, Warning, TEXT(ServerName));
 			serverInfo.currPlayers = result.Session.NumOpenPublicConnections;
 			serverInfo.serverArrIndex = arrIndex;
 			serverInfo.setPlayerCount();
@@ -81,7 +82,7 @@ void UMiSoGameInstance::OnJoinSessionComplete(FName SessionName, EOnJoinSessionC
 		FString JoinAddress = "";
 		SessionInterface->GetResolvedConnectString(SessionName, JoinAddress);
 		if (JoinAddress != "")
-			UE_LOG(LogTemp, Warning, TEXT("ActualWorkedServer"));
+			UE_LOG(LogTemp, Warning, TEXT(JoinAddress));
 			player->ClientTravel(JoinAddress, ETravelType::TRAVEL_Absolute);
 
 	}
@@ -134,7 +135,7 @@ void UMiSoGameInstance::JoinServerList(int32 arrayIndex)
 	FOnlineSessionSearchResult result = SessionSearch->SearchResults[arrayIndex];
 	if (result.IsValid())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Join Server Works: %d"), arrayIndex);
+		UE_LOG(LogTemp, Warning, TEXT("Join Server Works at spot: %d"), arrayIndex);
 		SessionInterface->JoinSession(0, MySessionName, result);
 	}
 	else
