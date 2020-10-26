@@ -132,7 +132,7 @@ void UMiSoGameInstance::FindServerList()
 
 void UMiSoGameInstance::JoinServerList(int32 arrayIndex)
 {
-	FOnlineSessionSearchResult result = SessionSearch->SearchResults[arrayIndex];
+	FOnlineSessionSearchResult result = SessionSearch->SearchResults[arrayIndex + 1];
 	if (result.IsValid())
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Join Server Works at spot: %d"), arrayIndex);
