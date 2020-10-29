@@ -41,9 +41,10 @@ void UMiSoGameInstance::OnFindSessionComplete(bool isSuccessful)
 	UE_LOG(LogTemp, Warning, TEXT("OnFindSessionComplete, Success: %d"), isSuccessful);
 	if (isSuccessful)
 	{
-		int8 arrIndex = 0;
+		int32 arrIndex = -1;
 		for (FOnlineSessionSearchResult result : SessionSearch->SearchResults)
 		{
+			++arrIndex;
 			if (!result.IsValid())
 			{
 				continue;
@@ -54,15 +55,15 @@ void UMiSoGameInstance::OnFindSessionComplete(bool isSuccessful)
 			result.Session.SessionSettings.Get(FName("SERVER_NAME_KEY"), ServerName);
 			result.Session.SessionSettings.Get(FName("SERVER_HOST_KEY"), HostName);
 			serverInfo.serverName = ServerName;
-			UE_LOG(LogTemp, Warning, TEXT(ServerName));
-			serverInfo.currPlayers = result.Session.NumOpenPublicConnections;
+			serverInfo.hostName = HostName;
+			//UE_LOG(LogTemp, Warning, TEXT(serverInfo));
+			serverInfo.currPlayers = (1000 - result.Session.NumOpenPublicConnections);
 			serverInfo.serverArrIndex = arrIndex;
 			serverInfo.setPlayerCount();
 			serverInfo.isLan = result.Session.SessionSettings.bIsLANMatch;
 			serverInfo.ping = result.PingInMs;
 
 			serverListDel.Broadcast(serverInfo);
-			++arrIndex;
 		}
 		UE_LOG(LogTemp, Warning, TEXT("SearchResult, Sever Count: %d"), SessionSearch->SearchResults.Num());
 		// if (SessionSearch->SearchResults.Num())
@@ -82,7 +83,7 @@ void UMiSoGameInstance::OnJoinSessionComplete(FName SessionName, EOnJoinSessionC
 		FString JoinAddress = "";
 		SessionInterface->GetResolvedConnectString(SessionName, JoinAddress);
 		if (JoinAddress != "")
-			UE_LOG(LogTemp, Warning, TEXT(JoinAddress));
+			UE_LOG(LogTemp, Warning, TEXT("SteamHostWorks"));
 			player->ClientTravel(JoinAddress, ETravelType::TRAVEL_Absolute);
 
 	}
@@ -132,7 +133,7 @@ void UMiSoGameInstance::FindServerList()
 
 void UMiSoGameInstance::JoinServerList(int32 arrayIndex)
 {
-	FOnlineSessionSearchResult result = SessionSearch->SearchResults[arrayIndex + 1];
+	FOnlineSessionSearchResult result = SessionSearch->SearchResults[arrayIndex];
 	if (result.IsValid())
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Join Server Works at spot: %d"), arrayIndex);

@@ -29,6 +29,8 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 		FString serverName;
 	UPROPERTY(BlueprintReadOnly)
+		FString hostName;
+	UPROPERTY(BlueprintReadOnly)
 		int32 currPlayers;
 	UPROPERTY(BlueprintReadOnly)
 		FString playerCount;
@@ -45,7 +47,7 @@ public:
 	}
 };
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FServerDel, FServerInfo, ServerListDel);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FServerDel, FServerInfo,  serverListDel);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FServerSeachedDel, bool, SearchForServer);
 
 /**
