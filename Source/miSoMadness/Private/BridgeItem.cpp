@@ -8,7 +8,11 @@ ABridgeItem::ABridgeItem()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>("StaticMeshComponent");
+
+	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>("MeshComponent");
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/Binaries/3D/chips.chips'"));
+	UStaticMesh* Asset = MeshAsset.Object;
+	StaticMesh->SetStaticMesh(Asset);
 }
 
 

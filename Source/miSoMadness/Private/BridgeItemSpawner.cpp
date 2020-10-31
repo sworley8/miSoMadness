@@ -6,43 +6,45 @@
 // Sets default values
 ABridgeItemSpawner::ABridgeItemSpawner()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = false; //doesn't matter since i'm going to convert this back into a bridgegamemode eventually anyway
+	PrimaryActorTick.bCanEverTick = false;
+
+	UClass* TempItemsList[] = {ABridgeItem::StaticClass()}; 
+	ItemList.Append(TempItemsList, UE_ARRAY_COUNT(TempItemsList));
+	//ItemList.Add(ABridgeItem::StaticClass());
+
 }
 
 // Called when the game starts or when spawned
 void ABridgeItemSpawner::BeginPlay()
 {
 	Super::BeginPlay();
-	SpawnRandomBridgeItems(4); //just here as a simple test for now
+	SpawnRandomItems(1); //just here as a simple test for now
 }
 
 // Called every frame
 void ABridgeItemSpawner::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
-void ABridgeItemSpawner::SpawnBridgeItem(UStaticMesh* SpawnMesh, FVector SpawnLocation, FRotator SpawnRotation)
+void ABridgeItemSpawner::SpawnItem(UClass* SpawnItemClass, FVector SpawnLocation, FRotator SpawnRotation)
 {
 	FActorSpawnParameters SpawnParameters;
-	ABridgeItem* SpawnedBridgeItem = GetWorld()->SpawnActor<ABridgeItem>(ABridgeItem::StaticClass(), SpawnLocation, SpawnRotation, SpawnParameters);
-	SpawnedBridgeItem->ChangeMesh(SpawnMesh);
-	BridgeItems.Add(SpawnedBridgeItem);
+	AActor* SpawnedItem = GetWorld()->SpawnActor<AActor>(SpawnItemClass, SpawnLocation, SpawnRotation, SpawnParameters);
+	CurrentItems.Add(SpawnedItem);
 }
 
-void ABridgeItemSpawner::SpawnRandomBridgeItems(int32 NumberOfItems) //Spawns BridgeItems so that there is an even balance of mesh diversity
+void ABridgeItemSpawner::SpawnRandomItems(int32 NumberOfItems) //Spawns items with beautiful  d i v e r s i t y
 {
 	while (NumberOfItems > 0)
 	{
-		TArray<UStaticMesh*> MeshesCopy (BridgeItemMeshes); 
-		int32 Iterations = FMath::Min(MeshesCopy.Num(), NumberOfItems);
+		TArray<UClass*> ItemListCopy (ItemList); 
+		int32 Iterations = FMath::Min(ItemListCopy.Num(), NumberOfItems);
 		for (int32 i = 0; i < Iterations; i++)
 		{
-			int32 Index = FMath::RandRange(0, MeshesCopy.Num() - 1);
-			SpawnBridgeItem(MeshesCopy[Index], FVector(0, 0, 0), FRotator(0, 0, 0)); //Currently spawns everything in the same place and at the same time
-			MeshesCopy.RemoveAt(Index);
+			int32 Index = FMath::RandRange(0, ItemListCopy.Num() - 1);
+			SpawnItem(ItemListCopy[Index], FVector(0, 0, 200), FRotator(0, 0, 0)); //Currently spawns everything in the same place and at the same time
+			ItemListCopy.RemoveAt(Index);
 		}
 		NumberOfItems -= Iterations;
 	}

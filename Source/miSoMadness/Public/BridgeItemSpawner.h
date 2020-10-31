@@ -24,12 +24,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	void SpawnBridgeItem(UStaticMesh* SpawnMesh, FVector SpawnLocation, FRotator SpawnRotation); 
-	void SpawnRandomBridgeItems(int32 NumberOfItems);
+	void SpawnItem(UClass* SpawnItemClass, FVector SpawnLocation, FRotator SpawnRotation);
+	void SpawnRandomItems(int32 NumberOfItems);
 
-	UPROPERTY(EditAnywhere, Blueprintable, Category = "Arrays") //TArray of all the static meshes that can be assigned to BridgeItems (current: must be filled manually in editor)
-	TArray<UStaticMesh*> BridgeItemMeshes;
+	UPROPERTY(EditAnywhere, Blueprintable, Category = "Arrays") //TArray of all the bridge items that have a chance to spawn; must be manually instantiated using the editor
+	TArray<UClass*> ItemList;
 
-	UPROPERTY(EditAnywhere, Blueprintable, Category = "Arrays") //TArray of all the BridgeItems that have been instantiated
-	TArray<ABridgeItem*> BridgeItems;
+	UPROPERTY(EditAnywhere, Blueprintable, Category = "Arrays") //TArray of all the bridge items that have been instantiated (for cleanup purposes)
+	TArray<AActor*> CurrentItems;
 };
