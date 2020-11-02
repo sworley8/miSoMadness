@@ -8,17 +8,15 @@ ABridgeItemSpawner::ABridgeItemSpawner()
 {
 	PrimaryActorTick.bCanEverTick = false;
 
-	UClass* TempItemsList[] = {ABridgeItem::StaticClass()}; 
-	ItemList.Append(TempItemsList, UE_ARRAY_COUNT(TempItemsList));
-	//ItemList.Add(ABridgeItem::StaticClass());
-
+	UClass* TempItemList[] = {ABridgeItem::StaticClass()}; //replace ABridgeItem with the desired actor(s) -- always followed by ::StaticClass()
+	ItemList.Append(TempItemList, UE_ARRAY_COUNT(TempItemList));
 }
 
 // Called when the game starts or when spawned
 void ABridgeItemSpawner::BeginPlay()
 {
 	Super::BeginPlay();
-	SpawnRandomItems(1); //just here as a simple test for now
+	SpawnRandomItems(5); //just here as a simple test for now
 }
 
 // Called every frame
@@ -42,11 +40,24 @@ void ABridgeItemSpawner::SpawnRandomItems(int32 NumberOfItems) //Spawns items wi
 		int32 Iterations = FMath::Min(ItemListCopy.Num(), NumberOfItems);
 		for (int32 i = 0; i < Iterations; i++)
 		{
+			FVector SpawnLocation;
+			SpawnLocation.X = SpawnCenter.X + FMath::RandRange(-SpawnRangeX, SpawnRangeX);
+			SpawnLocation.Y = SpawnCenter.Y + FMath::RandRange(-SpawnRangeY, SpawnRangeY);
+			SpawnLocation.Z = SpawnCenter.Z;
+
 			int32 Index = FMath::RandRange(0, ItemListCopy.Num() - 1);
-			SpawnItem(ItemListCopy[Index], FVector(0, 0, 200), FRotator(0, 0, 0)); //Currently spawns everything in the same place and at the same time
+			SpawnItem(ItemListCopy[Index], SpawnLocation, FRotator(0, 0, 0));
 			ItemListCopy.RemoveAt(Index);
 		}
 		NumberOfItems -= Iterations;
 	}
 }
 
+void ABridgeItemSpawner::CleanUp() //for when bridgebuilding is over. cleans up all of the spawned actors and resets the array, probably ^TM
+{
+	for (AActor* item : CurrentItems)
+	{
+		item->Destroy();
+	}
+	CurrentItems.Empty();
+}

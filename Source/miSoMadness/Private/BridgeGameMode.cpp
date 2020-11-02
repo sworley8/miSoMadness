@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Not to be used: use BridgeItemSpawner instead
 
 #include "BridgeGameMode.h"
 
