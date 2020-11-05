@@ -36,9 +36,11 @@ private:
 		class UBoxComponent *whereToSpawn;
 
 	UPROPERTY(EditAnywhere)
-		float spawnLocationXRange;
+		int32 spawnLocationXRange;
 	UPROPERTY(EditAnywhere)
-		float spawnLocationYRange;
+		int32 spawnLocationYRange;
+	UPROPERTY(EditAnywhere)
+		int32 playerStartDistance;
 
 	int32 playerNum;
 	FVector spawnLocation;
