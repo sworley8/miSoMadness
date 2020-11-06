@@ -27,9 +27,9 @@ struct FServerInfo
 	GENERATED_BODY()
 public:
 	UPROPERTY(BlueprintReadOnly)
-		FString ServerName;
+		FString serverName;
 	UPROPERTY(BlueprintReadOnly)
-		FString HostName;
+		FString hostName;
 	UPROPERTY(BlueprintReadOnly)
 		int32 currPlayers;
 	UPROPERTY(BlueprintReadOnly)
