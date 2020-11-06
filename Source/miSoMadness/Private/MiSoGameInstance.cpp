@@ -50,8 +50,8 @@ void UMiSoGameInstance::OnFindSessionComplete(bool isSuccessful)
 				continue;
 			}
 			FServerInfo serverInfo;
-			FString ServerName = "Testing Server Name";
-			FString HostName = "Testing Host Name";
+			FString ServerName = "Not a Mi So Madness Game";
+			FString HostName = "Not a Mi So Madness Host";
 			result.Session.SessionSettings.Get(FName("SERVER_NAME_KEY"), ServerName);
 			result.Session.SessionSettings.Get(FName("SERVER_HOST_KEY"), HostName);
 			serverInfo.serverName = ServerName;
@@ -95,6 +95,7 @@ void UMiSoGameInstance::HostServer(FCreateServerInfo createServerInfo)
 	FOnlineSessionSettings sessionSettings;
 	sessionSettings.bAllowJoinInProgress = true;
 	sessionSettings.bIsDedicated = false;
+	sessionSettings.bAllowJoinViaPresence = true;
 	sessionSettings.bShouldAdvertise = true;
 	if (IOnlineSubsystem::Get()->GetSubsystemName() != "NULL" && !createServerInfo.isLan)
 	{
@@ -145,7 +146,13 @@ void UMiSoGameInstance::JoinServerList(int32 arrayIndex)
 	}
 }
 
-void UMiSoGameInstance::HostGameStart()
+void UMiSoGameInstance::HostGameStart(FServerInfo serverInfo)
 {
 
+	FOnlineSessionSettings sessionSettings;
+	if (serverInfo.hasStarted)
+	{
+		sessionSettings.bAllowJoinInProgress = false;
+		sessionSettings.bAllowJoinViaPresence = false;
+	}
 }

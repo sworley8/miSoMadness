@@ -27,9 +27,9 @@ struct FServerInfo
 	GENERATED_BODY()
 public:
 	UPROPERTY(BlueprintReadOnly)
-		FString serverName;
+		FString ServerName;
 	UPROPERTY(BlueprintReadOnly)
-		FString hostName;
+		FString HostName;
 	UPROPERTY(BlueprintReadOnly)
 		int32 currPlayers;
 	UPROPERTY(BlueprintReadOnly)
@@ -40,6 +40,8 @@ public:
 		bool isLan;
 	UPROPERTY(BlueprintReadOnly)
 		int32 ping;
+	UPROPERTY(BlueprintReadOnly)
+		bool hasStarted;
 
 	void setPlayerCount()
 	{
@@ -86,5 +88,5 @@ protected:
 	UFUNCTION(BlueprintCallable)
 		void JoinServerList(int32 arrayIndex);
 	UFUNCTION(BlueprintCallable)
-		void HostGameStart();
+		void HostGameStart(FServerInfo serverInfo);
 };
