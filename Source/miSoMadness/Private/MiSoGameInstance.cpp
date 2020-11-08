@@ -21,6 +21,7 @@ void UMiSoGameInstance::Init()
 			SessionInterface->OnCreateSessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnCreateSessionComplete);
 			SessionInterface->OnFindSessionsCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnFindSessionComplete);
 			SessionInterface->OnJoinSessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnJoinSessionComplete);
+			SessionInterface->OnDestroySessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnDestroySessionComplete);
 		}
 	}
 }
@@ -31,7 +32,25 @@ void UMiSoGameInstance::OnCreateSessionComplete(FName SessionName, bool isSucces
 	if (isSuccessful)
 	{
 		//UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
-		GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/RunMap?listen");
+		GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/LobbyMap?listen");
+	}
+
+}
+
+void UMiSoGameInstance::OnDestroySessionComplete(FName SessionName, bool isSuccessful)
+{
+	UE_LOG(LogTemp, Warning, TEXT("OnDestroySessionComplete, Success: %d"), isSuccessful);
+	if (IOnlineSubsystem* SubSystem = IOnlineSubsystem::Get())
+	{
+		SessionInterface = SubSystem->GetSessionInterface();
+		if (SessionInterface.IsValid())
+		{
+			if (isSuccessful)
+			{
+				//UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
+				GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/MainRoomMap?listen");
+			}
+		}
 	}
 }
 
@@ -155,4 +174,17 @@ void UMiSoGameInstance::HostGameStart(FServerInfo serverInfo)
 		sessionSettings.bAllowJoinInProgress = false;
 		sessionSettings.bAllowJoinViaPresence = false;
 	}
+}
+
+void UMiSoGameInstance::LeaveServer()
+{
+	if (IOnlineSubsystem* SubSystem = IOnlineSubsystem::Get())
+	{
+		SessionInterface = SubSystem->GetSessionInterface();
+		if (SessionInterface.IsValid())
+		{
+			SessionInterface->DestroySession(GameSessionName);
+		}
+	}
+
 }
