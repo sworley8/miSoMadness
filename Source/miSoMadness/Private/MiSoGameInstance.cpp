@@ -32,7 +32,7 @@ void UMiSoGameInstance::OnCreateSessionComplete(FName SessionName, bool isSucces
 	if (isSuccessful)
 	{
 		//UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
-		GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/LobbyMap?listen");
+		GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/RunMap?listen");
 	}
 
 }
