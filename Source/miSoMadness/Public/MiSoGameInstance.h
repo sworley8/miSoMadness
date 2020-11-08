@@ -76,6 +76,8 @@ protected:
 	virtual void Init() override;
 	//when create session is complete call this function
 	virtual void OnCreateSessionComplete(FName SessionName, bool isSuccessful);
+	//when start session is complete call this function
+	virtual void OnStartSessionComplete(FName SessionName, bool isSuccessful);
 	//when find session is complete call this function
 	virtual void OnFindSessionComplete(bool isSuccessful);
 	//when join session is complete call this function
