@@ -21,17 +21,52 @@ void UMiSoGameInstance::Init()
 			SessionInterface->OnCreateSessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnCreateSessionComplete);
 			SessionInterface->OnFindSessionsCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnFindSessionComplete);
 			SessionInterface->OnJoinSessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnJoinSessionComplete);
+			SessionInterface->OnDestroySessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnDestroySessionComplete);
 		}
 	}
 }
 
 void UMiSoGameInstance::OnCreateSessionComplete(FName SessionName, bool isSuccessful)
 {
-	UE_LOG(LogTemp, Warning, TEXT("OnCreateSessionComplete, Success: %d"), isSuccessful);
+	UE_LOG(LogTemp, Warning, TEXT("OnStartingSessionComplete, Success: %d"), isSuccessful);
+	if (IOnlineSubsystem* SubSystem = IOnlineSubsystem::Get())
+	{
+		SessionInterface = SubSystem->GetSessionInterface();
+		if (SessionInterface.IsValid())
+		{
+			SessionInterface->StartSession(SessionName)
+		}
+
+
+}
+
+void UMiSoGameInstance::OnStartSessionComplete(FName SessionName, bool isSuccessful)
+{
+	UE_LOG(LogTemp, Warning, TEXT("OnStartingSessionComplete, Success: %d"), isSuccessful);
 	if (isSuccessful)
 	{
 		//UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
 		GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/RunMap?listen");
+	}
+
+}
+
+void UMiSoGameInstance::OnDestroySessionComplete(FName SessionName, bool isSuccessful)
+{
+	//UE_LOG(LogTemp, Warning, TEXT("OnDestroySessionComplete, Success: %d"), isSuccessful);
+	if (IOnlineSubsystem* SubSystem = IOnlineSubsystem::Get())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("OnDestroying, Success: %d"), isSuccessful);
+		SessionInterface = SubSystem->GetSessionInterface();
+		if (SessionInterface.IsValid())
+		{
+			if (isSuccessful)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("OnDestroySessionComplete, Success: %d"), isSuccessful);
+				//UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
+				GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/MainRoomMap?listen");
+			}
+		}
 	}
 }
 
@@ -155,4 +190,18 @@ void UMiSoGameInstance::HostGameStart(FServerInfo serverInfo)
 		sessionSettings.bAllowJoinInProgress = false;
 		sessionSettings.bAllowJoinViaPresence = false;
 	}
+}
+
+void UMiSoGameInstance::LeaveServer()
+{
+	if (IOnlineSubsystem* SubSystem = IOnlineSubsystem::Get())
+	{
+		SessionInterface = SubSystem->GetSessionInterface();
+		if (SessionInterface.IsValid())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Destroy Server Works: %s"), GameSessionName);
+			SessionInterface->DestroySession(GameSessionName);
+		}
+	}
+
 }
