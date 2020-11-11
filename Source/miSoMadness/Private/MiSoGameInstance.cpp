@@ -22,6 +22,7 @@ void UMiSoGameInstance::Init()
 			SessionInterface->OnFindSessionsCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnFindSessionComplete);
 			SessionInterface->OnJoinSessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnJoinSessionComplete);
 			SessionInterface->OnDestroySessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnDestroySessionComplete);
+			SessionInterface->OnStartSessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnStartSessionComplete);
 		}
 	}
 }
@@ -34,7 +35,7 @@ void UMiSoGameInstance::OnCreateSessionComplete(FName SessionName, bool isSucces
 		SessionInterface = SubSystem->GetSessionInterface();
 		if (SessionInterface.IsValid())
 		{
-			SessionInterface->StartSession(SessionName)
+			SessionInterface->StartSession(SessionName);
 		}
 	}
 
@@ -47,7 +48,7 @@ void UMiSoGameInstance::OnStartSessionComplete(FName SessionName, bool isSuccess
 	if (isSuccessful)
 	{
 		//UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
-		GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/RunMap?listen");
+		GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/LobbyMap?listen");
 	}
 
 }
@@ -64,8 +65,9 @@ void UMiSoGameInstance::OnDestroySessionComplete(FName SessionName, bool isSucce
 			if (isSuccessful)
 			{
 				UE_LOG(LogTemp, Warning, TEXT("OnDestroySessionComplete, Success: %d"), isSuccessful);
-				//UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
-				GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/MainRoomMap?listen");
+				UGameplayStatics::OpenLevel(GetWorld(), "MainRoomMap", true);
+				//UGameplayStatics::OpenLevel(GetWorld(), TEXT("/Game/ThirdPersonBP/Maps/MainRoomMap"), TRAVEL_Absolute);
+				//GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/MainRoomMap?listen");
 			}
 		}
 	}
@@ -97,7 +99,11 @@ void UMiSoGameInstance::OnFindSessionComplete(bool isSuccessful)
 			serverInfo.serverArrIndex = arrIndex;
 			serverInfo.setPlayerCount();
 			serverInfo.isLan = result.Session.SessionSettings.bIsLANMatch;
-			serverInfo.ping = result.PingInMs;
+			if (serverInfo.isLan) {
+				serverInfo.ping = result.PingInMs;
+			} else {
+				serverInfo.ping = 666;
+			}
 
 			serverListDel.Broadcast(serverInfo);
 		}
@@ -202,8 +208,8 @@ void UMiSoGameInstance::LeaveServer()
 		SessionInterface = SubSystem->GetSessionInterface();
 		if (SessionInterface.IsValid())
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Destroy Server Works: %s"), GameSessionName);
-			SessionInterface->DestroySession(GameSessionName);
+			UE_LOG(LogTemp, Warning, TEXT("Destroy Server Works: %d"), 1);
+			SessionInterface->DestroySession(MySessionName);
 		}
 	}
 
