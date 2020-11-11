@@ -4,7 +4,6 @@ D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\
 D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\AdvancedFriendsLibrary.h
 D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\AdvancedGameSession.h
 D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\AdvancedIdentityLibrary.h
-D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\AdvancedSessionsLibrary.h
 D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\AdvancedVoiceLibrary.h
 D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\BlueprintDataDefinitions.h
 D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\CancelFindSessionsCallbackProxy.h
@@ -16,6 +15,7 @@ D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\
 D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\GetRecentPlayersCallbackProxy.h
 D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\GetUserPrivilegeCallbackProxy.h
 D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\LoginUserCallbackProxy.h
-D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\LogoutUserCallbackProxy.h
 D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\SendFriendInviteCallbackProxy.h
 D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\UpdateSessionCallbackProxyAdvanced.h
+D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\LogoutUserCallbackProxy.h
+D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes\AdvancedSessionsLibrary.h
