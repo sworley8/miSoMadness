@@ -22,6 +22,7 @@ void UMiSoGameInstance::Init()
 			SessionInterface->OnFindSessionsCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnFindSessionComplete);
 			SessionInterface->OnJoinSessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnJoinSessionComplete);
 			SessionInterface->OnDestroySessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnDestroySessionComplete);
+			SessionInterface->OnStartSessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnStartSessionComplete);
 		}
 	}
 }
@@ -34,7 +35,7 @@ void UMiSoGameInstance::OnCreateSessionComplete(FName SessionName, bool isSucces
 		SessionInterface = SubSystem->GetSessionInterface();
 		if (SessionInterface.IsValid())
 		{
-			SessionInterface->StartSession(SessionName)
+			SessionInterface->StartSession(SessionName);
 		}
 	}
 
@@ -100,7 +101,7 @@ void UMiSoGameInstance::OnFindSessionComplete(bool isSuccessful)
 			if (serverInfo.isLan) {
 				serverInfo.ping = result.PingInMs;
 			} else {
-				serverInfo.ping = 666
+				serverInfo.ping = 666;
 			}
 
 			serverListDel.Broadcast(serverInfo);
@@ -206,9 +207,8 @@ void UMiSoGameInstance::LeaveServer()
 		SessionInterface = SubSystem->GetSessionInterface();
 		if (SessionInterface.IsValid())
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Destroy Server Works: %s"), ExistingSession);
-			auto ExistingSession = SessionInterface->GetNamedSession(MySessionName);
-			SessionInterface->DestroySession(ExistingSession);
+			UE_LOG(LogTemp, Warning, TEXT("Destroy Server Works: %d"), 1);
+			SessionInterface->DestroySession(MySessionName);
 		}
 	}
 
