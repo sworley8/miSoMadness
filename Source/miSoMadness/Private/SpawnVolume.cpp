@@ -2,6 +2,8 @@
 
 #include "Components/BoxComponent.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "MiSoGameInstance.h"
+#include "Kismet/GameplayStatics.h"
 #include "SpawnVolume.h"
 
 // Sets default values
@@ -27,11 +29,19 @@ void ASpawnVolume::BeginPlay()
 	spawnLocation = GetWorld()->GetFirstPlayerController()->GetSpawnLocation();
 	spawnLocationsSet.Add(spawnLocation);
 	
-	/*
-	* Sabin Kim: playerNum is always 0 for some reason. plz help
-	*/
+
+	UMiSoGameInstance* thisGame = Cast<UMiSoGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
+	
+
 	playerNum = GetWorld()->PlayerNum;
-	UE_LOG(LogTemp, Error, TEXT("%d players in the game"), playerNum);
+
+	/*
+	* Sabin Kim: somehow find a way to access FServerInfo.currPlayers from thisGame object
+	*				and then store it to playerNum var
+	*			 If that's done, delete 
+	*					if (playerNum < 2) playerNum = 10;
+	*/
+	
 	// Testing to see if 10 PlayerStart objects are properly instantiated if there are 10 players
 	if (playerNum < 2)
 		playerNum = 10;
@@ -57,12 +67,17 @@ void ASpawnVolume::createPlayerStart() {
 		spawnParams.Owner = this;
 		spawnParams.Instigator = GetInstigator();
 
-		spawnLocation.X = UKismetMathLibrary::RandomFloatInRange(20.f, FMath::Max(50.f, spawnLocationXRange));
-		spawnLocation.Y = UKismetMathLibrary::RandomFloatInRange(-spawnLocationYRange, spawnLocationYRange);
+		playerStartDistance = FMath::Max(16, playerStartDistance);
+
+		spawnLocation.X = UKismetMathLibrary::RandomIntegerInRange(1, spawnLocationXRange / playerStartDistance);
+		spawnLocation.Y = UKismetMathLibrary::RandomIntegerInRange(-spawnLocationYRange / playerStartDistance, spawnLocationYRange / playerStartDistance);
 		while (spawnLocationsSet.Contains(spawnLocation)) {
-			spawnLocation.X = UKismetMathLibrary::RandomFloatInRange(20.f, spawnLocationXRange);
-			spawnLocation.Y = UKismetMathLibrary::RandomFloatInRange(-spawnLocationYRange, spawnLocationYRange);
+			spawnLocation.X = UKismetMathLibrary::RandomIntegerInRange(1, spawnLocationXRange / playerStartDistance);
+			spawnLocation.Y = UKismetMathLibrary::RandomIntegerInRange(-spawnLocationYRange / playerStartDistance, spawnLocationYRange / playerStartDistance);
 		}
+
+		spawnLocation.X *= playerStartDistance;
+		spawnLocation.Y *= playerStartDistance;
 
 		world->SpawnActor<APlayerStart>(spawnLocation, FRotator(0.f, 0.f, 0.f), spawnParams);
 

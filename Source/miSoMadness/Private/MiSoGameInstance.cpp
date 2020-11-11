@@ -21,17 +21,53 @@ void UMiSoGameInstance::Init()
 			SessionInterface->OnCreateSessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnCreateSessionComplete);
 			SessionInterface->OnFindSessionsCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnFindSessionComplete);
 			SessionInterface->OnJoinSessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnJoinSessionComplete);
+			SessionInterface->OnDestroySessionCompleteDelegates.AddUObject(this, &UMiSoGameInstance::OnDestroySessionComplete);
 		}
 	}
 }
 
 void UMiSoGameInstance::OnCreateSessionComplete(FName SessionName, bool isSuccessful)
 {
-	UE_LOG(LogTemp, Warning, TEXT("OnCreateSessionComplete, Success: %d"), isSuccessful);
+	UE_LOG(LogTemp, Warning, TEXT("OnStartingSessionComplete, Success: %d"), isSuccessful);
+	if (IOnlineSubsystem* SubSystem = IOnlineSubsystem::Get())
+	{
+		SessionInterface = SubSystem->GetSessionInterface();
+		if (SessionInterface.IsValid())
+		{
+			SessionInterface->StartSession(SessionName)
+		}
+	}
+
+
+}
+
+void UMiSoGameInstance::OnStartSessionComplete(FName SessionName, bool isSuccessful)
+{
+	UE_LOG(LogTemp, Warning, TEXT("OnStartingSessionComplete, Success: %d"), isSuccessful);
 	if (isSuccessful)
 	{
 		//UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
 		GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/RunMap?listen");
+	}
+
+}
+
+void UMiSoGameInstance::OnDestroySessionComplete(FName SessionName, bool isSuccessful)
+{
+	//UE_LOG(LogTemp, Warning, TEXT("OnDestroySessionComplete, Success: %d"), isSuccessful);
+	if (IOnlineSubsystem* SubSystem = IOnlineSubsystem::Get())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("OnDestroying, Success: %d"), isSuccessful);
+		SessionInterface = SubSystem->GetSessionInterface();
+		if (SessionInterface.IsValid())
+		{
+			if (isSuccessful)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("OnDestroySessionComplete, Success: %d"), isSuccessful);
+				//UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
+				GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/MainRoomMap?listen");
+			}
+		}
 	}
 }
 
@@ -50,8 +86,8 @@ void UMiSoGameInstance::OnFindSessionComplete(bool isSuccessful)
 				continue;
 			}
 			FServerInfo serverInfo;
-			FString ServerName = "Testing Server Name";
-			FString HostName = "Testing Host Name";
+			FString ServerName = "Not a Mi So Madness Game";
+			FString HostName = "Not a Mi So Madness Host";
 			result.Session.SessionSettings.Get(FName("SERVER_NAME_KEY"), ServerName);
 			result.Session.SessionSettings.Get(FName("SERVER_HOST_KEY"), HostName);
 			serverInfo.serverName = ServerName;
@@ -83,8 +119,10 @@ void UMiSoGameInstance::OnJoinSessionComplete(FName SessionName, EOnJoinSessionC
 		FString JoinAddress = "";
 		SessionInterface->GetResolvedConnectString(SessionName, JoinAddress);
 		if (JoinAddress != "")
+		{
 			UE_LOG(LogTemp, Warning, TEXT("SteamHostWorks"));
 			player->ClientTravel(JoinAddress, ETravelType::TRAVEL_Absolute);
+		}
 
 	}
 }
@@ -95,6 +133,7 @@ void UMiSoGameInstance::HostServer(FCreateServerInfo createServerInfo)
 	FOnlineSessionSettings sessionSettings;
 	sessionSettings.bAllowJoinInProgress = true;
 	sessionSettings.bIsDedicated = false;
+	sessionSettings.bAllowJoinViaPresence = true;
 	sessionSettings.bShouldAdvertise = true;
 	if (IOnlineSubsystem::Get()->GetSubsystemName() != "NULL" && !createServerInfo.isLan)
 	{
@@ -145,7 +184,27 @@ void UMiSoGameInstance::JoinServerList(int32 arrayIndex)
 	}
 }
 
-void UMiSoGameInstance::HostGameStart()
+void UMiSoGameInstance::HostGameStart(FServerInfo serverInfo)
 {
+
+	FOnlineSessionSettings sessionSettings;
+	if (serverInfo.hasStarted)
+	{
+		sessionSettings.bAllowJoinInProgress = false;
+		sessionSettings.bAllowJoinViaPresence = false;
+	}
+}
+
+void UMiSoGameInstance::LeaveServer()
+{
+	if (IOnlineSubsystem* SubSystem = IOnlineSubsystem::Get())
+	{
+		SessionInterface = SubSystem->GetSessionInterface();
+		if (SessionInterface.IsValid())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Destroy Server Works: %s"), GameSessionName);
+			SessionInterface->DestroySession(GameSessionName);
+		}
+	}
 
 }
