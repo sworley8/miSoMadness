@@ -65,8 +65,9 @@ void UMiSoGameInstance::OnDestroySessionComplete(FName SessionName, bool isSucce
 			if (isSuccessful)
 			{
 				UE_LOG(LogTemp, Warning, TEXT("OnDestroySessionComplete, Success: %d"), isSuccessful);
-				//UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
-				GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/MainRoomMap?listen");
+				UGameplayStatics::OpenLevel(GetWorld(), "WaitRoomMap", true);
+				//UGameplayStatics::OpenLevel(GetWorld(), TEXT("/Game/ThirdPersonBP/Maps/MainRoomMap"), TRAVEL_Absolute);
+				//GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/MainRoomMap?listen");
 			}
 		}
 	}
