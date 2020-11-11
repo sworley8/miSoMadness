@@ -97,7 +97,11 @@ void UMiSoGameInstance::OnFindSessionComplete(bool isSuccessful)
 			serverInfo.serverArrIndex = arrIndex;
 			serverInfo.setPlayerCount();
 			serverInfo.isLan = result.Session.SessionSettings.bIsLANMatch;
-			serverInfo.ping = result.PingInMs;
+			if (serverInfo.isLan) {
+				serverInfo.ping = result.PingInMs;
+			} else {
+				serverInfo.ping = 666
+			}
 
 			serverListDel.Broadcast(serverInfo);
 		}
@@ -202,8 +206,9 @@ void UMiSoGameInstance::LeaveServer()
 		SessionInterface = SubSystem->GetSessionInterface();
 		if (SessionInterface.IsValid())
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Destroy Server Works: %s"), GameSessionName);
-			SessionInterface->DestroySession(GameSessionName);
+			UE_LOG(LogTemp, Warning, TEXT("Destroy Server Works: %s"), ExistingSession);
+			auto ExistingSession = SessionInterface->GetNamedSession(SESSION_NAME);
+			SessionInterface->DestroySession(ExistingSession);
 		}
 	}
 
