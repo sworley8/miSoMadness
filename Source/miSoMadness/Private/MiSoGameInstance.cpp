@@ -207,7 +207,7 @@ void UMiSoGameInstance::LeaveServer()
 		if (SessionInterface.IsValid())
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Destroy Server Works: %s"), ExistingSession);
-			auto ExistingSession = SessionInterface->GetNamedSession(SESSION_NAME);
+			auto ExistingSession = SessionInterface->GetNamedSession(MySessionName);
 			SessionInterface->DestroySession(ExistingSession);
 		}
 	}
