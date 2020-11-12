@@ -11,8 +11,7 @@ ABridgeItem::ABridgeItem()
 
 	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>("MeshComponent");
 	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/Binaries/3D/chips.chips'"));
-	UStaticMesh* Asset = MeshAsset.Object;
-	StaticMesh->SetStaticMesh(Asset);
+	StaticMesh->SetStaticMesh(MeshAsset.Object);
 }
 
 

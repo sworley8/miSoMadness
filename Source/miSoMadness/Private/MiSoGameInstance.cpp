@@ -34,7 +34,7 @@ void UMiSoGameInstance::OnCreateSessionComplete(FName SessionName, bool isSucces
 		SessionInterface = SubSystem->GetSessionInterface();
 		if (SessionInterface.IsValid())
 		{
-			SessionInterface->StartSession(SessionName)
+			SessionInterface->StartSession(SessionName);
 		}
 	}
 
