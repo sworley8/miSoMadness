@@ -29,7 +29,7 @@ void UMiSoGameInstance::Init()
 
 void UMiSoGameInstance::OnCreateSessionComplete(FName SessionName, bool isSuccessful)
 {
-	UE_LOG(LogTemp, Warning, TEXT("OnStartingSessionComplete, Success: %d"), isSuccessful);
+	//UE_LOG(LogTemp, Warning, TEXT("OnStartingSessionComplete, Success: %d"), isSuccessful);
 	if (IOnlineSubsystem* SubSystem = IOnlineSubsystem::Get())
 	{
 		SessionInterface = SubSystem->GetSessionInterface();
@@ -44,7 +44,7 @@ void UMiSoGameInstance::OnCreateSessionComplete(FName SessionName, bool isSucces
 
 void UMiSoGameInstance::OnStartSessionComplete(FName SessionName, bool isSuccessful)
 {
-	UE_LOG(LogTemp, Warning, TEXT("OnStartingSessionComplete, Success: %d"), isSuccessful);
+	//UE_LOG(LogTemp, Warning, TEXT("OnStartingSessionComplete, Success: %d"), isSuccessful);
 	if (isSuccessful)
 	{
 		//UGameplayStatics::OpenLevel(GetWorld(), "RunMap", true, "listen");
@@ -58,13 +58,13 @@ void UMiSoGameInstance::OnDestroySessionComplete(FName SessionName, bool isSucce
 	//UE_LOG(LogTemp, Warning, TEXT("OnDestroySessionComplete, Success: %d"), isSuccessful);
 	if (IOnlineSubsystem* SubSystem = IOnlineSubsystem::Get())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("OnDestroying, Success: %d"), isSuccessful);
+		//UE_LOG(LogTemp, Warning, TEXT("OnDestroying, Success: %d"), isSuccessful);
 		SessionInterface = SubSystem->GetSessionInterface();
 		if (SessionInterface.IsValid())
 		{
 			if (isSuccessful)
 			{
-				UE_LOG(LogTemp, Warning, TEXT("OnDestroySessionComplete, Success: %d"), isSuccessful);
+				//UE_LOG(LogTemp, Warning, TEXT("OnDestroySessionComplete, Success: %d"), isSuccessful);
 				UGameplayStatics::OpenLevel(GetWorld(), "MainRoomMap", true);
 				//UGameplayStatics::OpenLevel(GetWorld(), TEXT("/Game/ThirdPersonBP/Maps/MainRoomMap"), TRAVEL_Absolute);
 				//GetWorld()->ServerTravel("/Game/ThirdPersonBP/Maps/MainRoomMap?listen");
@@ -76,7 +76,7 @@ void UMiSoGameInstance::OnDestroySessionComplete(FName SessionName, bool isSucce
 void UMiSoGameInstance::OnFindSessionComplete(bool isSuccessful)
 {
 	SearchForServer.Broadcast(false);
-	UE_LOG(LogTemp, Warning, TEXT("OnFindSessionComplete, Success: %d"), isSuccessful);
+	//UE_LOG(LogTemp, Warning, TEXT("OnFindSessionComplete, Success: %d"), isSuccessful);
 	if (isSuccessful)
 	{
 		int32 arrIndex = -1;
@@ -107,7 +107,7 @@ void UMiSoGameInstance::OnFindSessionComplete(bool isSuccessful)
 
 			serverListDel.Broadcast(serverInfo);
 		}
-		UE_LOG(LogTemp, Warning, TEXT("SearchResult, Sever Count: %d"), SessionSearch->SearchResults.Num());
+		//UE_LOG(LogTemp, Warning, TEXT("SearchResult, Sever Count: %d"), SessionSearch->SearchResults.Num());
 		// if (SessionSearch->SearchResults.Num())
 		// {
 		// 	UE_LOG(LogTemp, Warning, TEXT("Joining Server"));
@@ -121,12 +121,12 @@ void UMiSoGameInstance::OnJoinSessionComplete(FName SessionName, EOnJoinSessionC
 {
 	if (APlayerController* player = UGameplayStatics::GetPlayerController(GetWorld(), 0))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("OnJoinSessionComplete, SessionName: %s"), *SessionName.ToString());
+		//UE_LOG(LogTemp, Warning, TEXT("OnJoinSessionComplete, SessionName: %s"), *SessionName.ToString());
 		FString JoinAddress = "";
 		SessionInterface->GetResolvedConnectString(SessionName, JoinAddress);
 		if (JoinAddress != "")
 		{
-			UE_LOG(LogTemp, Warning, TEXT("SteamHostWorks"));
+			//UE_LOG(LogTemp, Warning, TEXT("SteamHostWorks"));
 			player->ClientTravel(JoinAddress, ETravelType::TRAVEL_Absolute);
 		}
 
@@ -135,7 +135,7 @@ void UMiSoGameInstance::OnJoinSessionComplete(FName SessionName, EOnJoinSessionC
 
 void UMiSoGameInstance::HostServer(FCreateServerInfo createServerInfo)
 {
-	UE_LOG(LogTemp, Warning, TEXT("CreateServer"));
+	//UE_LOG(LogTemp, Warning, TEXT("CreateServer"));
 	FOnlineSessionSettings sessionSettings;
 	sessionSettings.bAllowJoinInProgress = true;
 	sessionSettings.bIsDedicated = false;
@@ -143,7 +143,7 @@ void UMiSoGameInstance::HostServer(FCreateServerInfo createServerInfo)
 	sessionSettings.bShouldAdvertise = true;
 	if (IOnlineSubsystem::Get()->GetSubsystemName() != "NULL" && !createServerInfo.isLan)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("SteamHostWorks"));
+		//UE_LOG(LogTemp, Warning, TEXT("SteamHostWorks"));
 		sessionSettings.bIsLANMatch = false;
 	}
 	else {
@@ -160,11 +160,11 @@ void UMiSoGameInstance::HostServer(FCreateServerInfo createServerInfo)
 void UMiSoGameInstance::FindServerList()
 {
 	SearchForServer.Broadcast(true);
-	UE_LOG(LogTemp, Warning, TEXT("FindServerList"));
+	//UE_LOG(LogTemp, Warning, TEXT("FindServerList"));
 	SessionSearch = MakeShareable(new FOnlineSessionSearch());
 	if (IOnlineSubsystem::Get()->GetSubsystemName() != "NULL")
 	{
-		UE_LOG(LogTemp, Warning, TEXT("SteamJoinWorks"));
+		//UE_LOG(LogTemp, Warning, TEXT("SteamJoinWorks"));
 		SessionSearch->bIsLanQuery = false;
 	}
 	else {
@@ -181,12 +181,12 @@ void UMiSoGameInstance::JoinServerList(int32 arrayIndex)
 	FOnlineSessionSearchResult result = SessionSearch->SearchResults[arrayIndex];
 	if (result.IsValid())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Join Server Works at spot: %d"), arrayIndex);
+		//UE_LOG(LogTemp, Warning, TEXT("Join Server Works at spot: %d"), arrayIndex);
 		SessionInterface->JoinSession(0, MySessionName, result);
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Join Server Not Works: %d"), arrayIndex);
+		//UE_LOG(LogTemp, Warning, TEXT("Join Server Not Works: %d"), arrayIndex);
 	}
 }
 
@@ -208,7 +208,7 @@ void UMiSoGameInstance::LeaveServer()
 		SessionInterface = SubSystem->GetSessionInterface();
 		if (SessionInterface.IsValid())
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Destroy Server Works: %d"), 1);
+			//UE_LOG(LogTemp, Warning, TEXT("Destroy Server Works: %d"), 1);
 			SessionInterface->DestroySession(MySessionName);
 		}
 	}
