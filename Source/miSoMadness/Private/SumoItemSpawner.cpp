@@ -8,7 +8,7 @@ ASumoItemSpawner::ASumoItemSpawner()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
-	ItemSpawnTime = 10.0f; //time in seconds to Spawn
+	ItemSpawnTime = 5.0f; //time in seconds to Spawn
 	SpawnTimer = 0.0f;
 
 	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>("MeshComponent");
