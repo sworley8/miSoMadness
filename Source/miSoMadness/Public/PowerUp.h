@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Components/SphereComponent.h"
 #include "PowerUp.generated.h"
+#include "RamenCharacter.h"
 
 UCLASS()
 class MISOMADNESS_API APowerUp : public AActor

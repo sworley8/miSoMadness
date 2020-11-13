@@ -8,7 +8,7 @@ APowerUpSpawner::APowerUpSpawner()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
-	PowerUpRespawnTime = 3.0f;
+	PowerUpRespawnTime = 5.0f; //time in seconds to respawn
 	RespawnTimer = 0.0f;
 
 	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>("MeshComponent");
@@ -44,7 +44,7 @@ void APowerUpSpawner::SpawnRandomPowerUp()
 	RespawnTimer = 0.0f;
 	FActorSpawnParameters SpawnParameters;
 	FVector SpawnLocation = GetActorLocation();
-	SpawnLocation.Z = SpawnLocation.Z + 200.0f;
+	SpawnLocation.Z = SpawnLocation.Z + 150.0f; //might want to tweak the 150.0f
 
 	int32 Index = FMath::RandRange(0, PowerUpList.Num() - 1);
 	SpawnedPowerUp = GetWorld()->SpawnActor<AActor>(PowerUpList[Index], SpawnLocation, FRotator(0,0,0), SpawnParameters);

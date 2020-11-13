@@ -10,7 +10,7 @@ APowerUp::APowerUp()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	SphereRadius = 100.0f; //might want to make this slightly larger
+	SphereRadius = 125.0f; //might want to make this slightly larger
 	RotationSpeed = 1.0f;
 
 	PickupCollisionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("My Sphere Component"));
@@ -45,7 +45,7 @@ void APowerUp::Tick(float DeltaTime)
 
 void APowerUp::OnPlayerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if ((OtherActor != nullptr) && (OtherActor != this) /*&& (OtherActor is a player)*/ && (OtherComponent != nullptr))
+	if ((OtherActor != nullptr) && (OtherActor != this) /*&& (OtherActor->IsA(APlayerClass::StaticClass())*/ && (OtherComponent != nullptr))
 	{
 		
 
