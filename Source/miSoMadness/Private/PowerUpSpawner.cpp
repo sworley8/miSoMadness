@@ -12,7 +12,7 @@ APowerUpSpawner::APowerUpSpawner()
 	RespawnTimer = 0.0f;
 
 	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>("MeshComponent");
-	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/Binaries/3D/chips.chips'")); //i'm thinking like a raised dais for the powerup to hover over, also helps with getting the location
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/Binaries/3D/CuttingBoard/CuttingBoard.CuttingBoard'")); //i'm thinking like a raised dais for the powerup to hover over, also helps with getting the location
 	StaticMesh->SetStaticMesh(MeshAsset.Object);
 	SetRootComponent(StaticMesh);
 
@@ -44,7 +44,7 @@ void APowerUpSpawner::SpawnRandomPowerUp()
 	RespawnTimer = 0.0f;
 	FActorSpawnParameters SpawnParameters;
 	FVector SpawnLocation = GetActorLocation();
-	SpawnLocation.Z = SpawnLocation.Z + 150.0f; //might want to tweak the 150.0f
+	SpawnLocation.Z = SpawnLocation.Z + 100.0f;
 
 	int32 Index = FMath::RandRange(0, PowerUpList.Num() - 1);
 	SpawnedPowerUp = GetWorld()->SpawnActor<AActor>(PowerUpList[Index], SpawnLocation, FRotator(0,0,0), SpawnParameters);

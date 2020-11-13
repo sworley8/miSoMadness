@@ -12,12 +12,15 @@ ASumoItemSpawner::ASumoItemSpawner()
 	SpawnTimer = 0.0f;
 
 	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>("MeshComponent");
-	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/Binaries/3D/chips.chips'")); //i'm thinking like a raised dais, also helps with getting the location
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/Binaries/3D/CuttingBoard/CuttingBoard.CuttingBoard'"));
 	StaticMesh->SetStaticMesh(MeshAsset.Object);
 	SetRootComponent(StaticMesh);
 
-	UClass* TempList[] = {APowerUp::StaticClass()}; 
+	/*
+	UClass* TempList[] = { APowerUp::StaticClass() };
 	ItemList.Append(TempList, UE_ARRAY_COUNT(TempList));
+	Uncomment this snippet to add c++ classes to the array.
+	*/
 }
 
 // Called when the game starts or when spawned
@@ -41,7 +44,7 @@ void ASumoItemSpawner::SpawnRandomItem()
 	SpawnTimer = 0.0f;
 	FActorSpawnParameters SpawnParameters;
 	FVector SpawnLocation = GetActorLocation();
-	SpawnLocation.Z = SpawnLocation.Z + 150.0f; //might want to tweak the 150.0f
+	SpawnLocation.Z = SpawnLocation.Z + 100.0f;
 
 	int32 Index = FMath::RandRange(0, ItemList.Num() - 1);
 	SpawnedItems.Add(GetWorld()->SpawnActor<AActor>(ItemList[Index], SpawnLocation, FRotator(0, 0, 0), SpawnParameters));

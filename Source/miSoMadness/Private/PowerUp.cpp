@@ -23,7 +23,7 @@ APowerUp::APowerUp()
 	StaticMesh->SetStaticMesh(MeshAsset.Object);
 	StaticMesh->SetupAttachment(RootComponent);
 
-	PickupCollisionSphere->OnComponentBeginOverlap.AddDynamic(this, &APowerUp::OnPlayerOverlap);
+	//PickupCollisionSphere->OnComponentBeginOverlap.AddDynamic(this, &APowerUp::OnPlayerOverlap);
 
 }
 
@@ -40,16 +40,21 @@ void APowerUp::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	FRotator NewRotation = GetActorRotation().Add(0, RotationSpeed, 0); 
 	SetActorRotation(NewRotation);
-	DrawDebugSphere(GetWorld(), GetActorLocation(), SphereRadius, 20, FColor::Purple, false, -1, 0, 1); //shows hitbox for powerup
+	//DrawDebugSphere(GetWorld(), GetActorLocation(), SphereRadius, 20, FColor::Purple, false, -1, 0, 1); //shows hitbox for powerup
 }
-
-void APowerUp::OnPlayerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+/*
+ void APowerUp::OnPlayerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if ((OtherActor != nullptr) && (OtherActor != this) /*&& (OtherActor->IsA(APlayerClass::StaticClass())*/ && (OtherComponent != nullptr))
+	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComponent != nullptr))
 	{
-		
-
+		NewPlayerWalkSpeed = 2000.0f;
 
 		Destroy();
 	}
+}
+*/
+
+void APowerUp::SetNewPlayerSpeed()
+{
+	NewPlayerWalkSpeed = 2000.0f;
 }

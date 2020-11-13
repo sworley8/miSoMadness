@@ -6,7 +6,6 @@
 #include "GameFramework/Actor.h"
 #include "Components/SphereComponent.h"
 #include "PowerUp.generated.h"
-#include "RamenCharacter.h"
 
 UCLASS()
 class MISOMADNESS_API APowerUp : public AActor
@@ -37,7 +36,13 @@ public:
 	UPROPERTY(EditAnywhere, Blueprintable, Category = "Components")
 	float RotationSpeed;
 
-	UFUNCTION(Blueprintable)
-	void OnPlayerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	float NewPlayerWalkSpeed;
 
+	/*UFUNCTION(BlueprintCallable)
+	void OnPlayerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	*/
+
+	UFUNCTION(BlueprintCallable)
+	void SetNewPlayerSpeed();
 };
