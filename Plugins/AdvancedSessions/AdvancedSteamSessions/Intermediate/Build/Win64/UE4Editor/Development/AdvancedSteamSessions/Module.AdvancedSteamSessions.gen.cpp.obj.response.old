@@ -32,7 +32,15 @@
 /wd4244
 /wd4838
 /I .
+<<<<<<< HEAD
+<<<<<<< HEAD
+/I "D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Source\AdvancedSteamSessions\Private"
+=======
+/I "D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Source\AdvancedSteamSessions\Private"
+>>>>>>> 2017aed0b927af7d8028e152fe363df7852ad61f
+=======
 /I "C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Source\AdvancedSteamSessions\Private"
+>>>>>>> a10f14d9c44322d8f0e844e7ec441b4643771012
 /I ..\Plugins\Online\OnlineSubsystem\Intermediate\Build\Win64\UE4Editor\Inc\OnlineSubsystem
 /I ..\Plugins\Online\OnlineSubsystem
 /I ..\Plugins\Online\OnlineSubsystem\Source
@@ -240,6 +248,25 @@
 /I Runtime\Experimental\GeometryCollectionSimulationCore\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
+<<<<<<< HEAD
+<<<<<<< HEAD
+/I "D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Inc\AdvancedSteamSessions"
+/I "D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Source"
+/I ..\Plugins\Online\OnlineSubsystemSteam\Source\Private
+/I "D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Source\AdvancedSteamSessions\Classes"
+/I "D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Intermediate\Build\Win64\UE4Editor\Inc\AdvancedSessions"
+/I "D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source"
+/I "D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes"
+=======
+/I "D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Inc\AdvancedSteamSessions"
+/I "D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Source"
+/I ..\Plugins\Online\OnlineSubsystemSteam\Source\Private
+/I "D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Source\AdvancedSteamSessions\Classes"
+/I "D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Intermediate\Build\Win64\UE4Editor\Inc\AdvancedSessions"
+/I "D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source"
+/I "D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes"
+>>>>>>> 2017aed0b927af7d8028e152fe363df7852ad61f
+=======
 /I "C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Inc\AdvancedSteamSessions"
 /I "C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Source"
 /I ..\Plugins\Online\OnlineSubsystemSteam\Source\Private
@@ -247,6 +274,7 @@
 /I "C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Intermediate\Build\Win64\UE4Editor\Inc\AdvancedSessions"
 /I "C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source"
 /I "C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSessions\Source\AdvancedSessions\Classes"
+>>>>>>> a10f14d9c44322d8f0e844e7ec441b4643771012
 /I ThirdParty\Steamworks\Steamv147\sdk\public
 /I ..\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\UE4Editor\Inc\OnlineSubsystemSteam
 /I ..\Plugins\Online\OnlineSubsystemSteam
@@ -275,6 +303,35 @@
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include
 /I ThirdParty\PhysX3\APEX_1.4\shared\internal\include
+<<<<<<< HEAD
+<<<<<<< HEAD
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
+/FI"D:\GitHub files\miSoMadness\Intermediate\Build\Win64\miSoMadnessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"D:\GitHub files\miSoMadness\Intermediate\Build\Win64\miSoMadnessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"D:\GitHub files\miSoMadness\Intermediate\Build\Win64\miSoMadnessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.gen.cpp"
+/FI"D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Definitions.AdvancedSteamSessions.h"
+/Fo"D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.gen.cpp.obj"
+=======
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"
+/FI"D:\Unreal Projects\miSoMadness\Intermediate\Build\Win64\miSoMadnessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"D:\Unreal Projects\miSoMadness\Intermediate\Build\Win64\miSoMadnessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"D:\Unreal Projects\miSoMadness\Intermediate\Build\Win64\miSoMadnessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.gen.cpp"
+/FI"D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Definitions.AdvancedSteamSessions.h"
+/Fo"D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.gen.cpp.obj"
+>>>>>>> 2017aed0b927af7d8028e152fe363df7852ad61f
+=======
 /I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"
@@ -287,6 +344,7 @@
 "C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.gen.cpp"
 /FI"C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Definitions.AdvancedSteamSessions.h"
 /Fo"C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.gen.cpp.obj"
+>>>>>>> a10f14d9c44322d8f0e844e7ec441b4643771012
 /TP
 /GR-
 /W4
