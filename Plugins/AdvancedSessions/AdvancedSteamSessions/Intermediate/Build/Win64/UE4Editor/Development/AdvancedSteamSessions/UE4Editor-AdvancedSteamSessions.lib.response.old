@@ -6,9 +6,25 @@
 /NAME:"UE4Editor-AdvancedSteamSessions.dll"
 /IGNORE:4221
 /NODEFAULTLIB
+<<<<<<< HEAD
+<<<<<<< HEAD
+"D:\GitHub files\miSoMadness\Intermediate\Build\Win64\miSoMadnessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.cpp.obj"
+"D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.gen.cpp.obj"
+"D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Default.rc2.res"
+/OUT:"D:\GitHub files\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\UE4Editor-AdvancedSteamSessions.lib"
+=======
+"D:\Unreal Projects\miSoMadness\Intermediate\Build\Win64\miSoMadnessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.cpp.obj"
+"D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.gen.cpp.obj"
+"D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Default.rc2.res"
+/OUT:"D:\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\UE4Editor-AdvancedSteamSessions.lib"
+>>>>>>> 2017aed0b927af7d8028e152fe363df7852ad61f
+=======
 "C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Intermediate\Build\Win64\miSoMadnessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 "C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.cpp.obj"
 "C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Module.AdvancedSteamSessions.gen.cpp.obj"
 "C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\Default.rc2.res"
 /OUT:"C:\Users\sabin\Documents\Unreal Projects\miSoMadness\Plugins\AdvancedSessions\AdvancedSteamSessions\Intermediate\Build\Win64\UE4Editor\Development\AdvancedSteamSessions\UE4Editor-AdvancedSteamSessions.lib"
+>>>>>>> a10f14d9c44322d8f0e844e7ec441b4643771012
 /INCLUDE:IMPLEMENT_MODULE_AdvancedSteamSessions
