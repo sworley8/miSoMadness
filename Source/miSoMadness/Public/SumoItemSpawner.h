@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Engine/World.h"
 #include "PowerUp.h"
+#include "Net/UnrealNetwork.h"
 #include "SumoItemSpawner.generated.h"
 
 UCLASS()
