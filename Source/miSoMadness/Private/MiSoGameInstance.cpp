@@ -194,11 +194,8 @@ void UMiSoGameInstance::HostGameStart(FServerInfo serverInfo)
 {
 
 	FOnlineSessionSettings sessionSettings;
-	if (serverInfo.hasStarted)
-	{
-		sessionSettings.bAllowJoinInProgress = false;
-		sessionSettings.bAllowJoinViaPresence = false;
-	}
+	sessionSettings.bAllowJoinInProgress = false;
+	sessionSettings.bAllowJoinViaPresence = false;
 }
 
 void UMiSoGameInstance::LeaveServer()
