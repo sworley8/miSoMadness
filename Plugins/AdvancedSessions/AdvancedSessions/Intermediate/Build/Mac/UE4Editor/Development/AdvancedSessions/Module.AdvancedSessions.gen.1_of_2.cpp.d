@@ -1,4 +1,4 @@
-/Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSessions/Module.AdvancedSessions.gen.1_of_2.cpp.o: \
+/Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSessions/Module.AdvancedSessions.gen.1_of_2.cpp.o: \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Public/TextureLayout.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Public/TextureLayout3d.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine/SoundWave.generated.h \
@@ -1257,7 +1257,7 @@
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Core/Public/CoreTypes.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Core/Public/Containers/ContainersFwd.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Public/EngineSharedPCH.h \
-  /Users/swan/VGDEV/miSoMadness/Intermediate/Build/Mac/miSoMadnessEditor/Development/Engine/SharedPCH.Engine.ShadowErrors.h \
+  /Users/swan/miSoMadness/Intermediate/Build/Mac/miSoMadnessEditor/Development/Engine/SharedPCH.Engine.ShadowErrors.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/stddef.h \
@@ -2671,13 +2671,13 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSessions/Module.AdvancedSessions.gen.1_of_2.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSessions/Definitions.AdvancedSessions.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedExternalUILibrary.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSessions/Module.AdvancedSessions.gen.1_of_2.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSessions/Definitions.AdvancedSessions.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedExternalUILibrary.gen.cpp \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/CoreUObject/Public/UObject/GeneratedCppIncludes.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/CoreUObject/Public/UObject/MetaData.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedExternalUILibrary.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/BlueprintDataDefinitions.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedExternalUILibrary.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/BlueprintDataDefinitions.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerState.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine/PlayerState.generated.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystem/Source/Public/Interfaces/OnlineSessionInterface.h \
@@ -2820,30 +2820,30 @@
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystemUtils/Intermediate/Build/Mac/UE4Editor/Inc/OnlineSubsystemUtils/ShowLoginUICallbackProxy.generated.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystemUtils/Source/OnlineSubsystemUtils/Classes/TurnBasedBlueprintLibrary.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystemUtils/Intermediate/Build/Mac/UE4Editor/Inc/OnlineSubsystemUtils/TurnBasedBlueprintLibrary.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/BlueprintDataDefinitions.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedExternalUILibrary.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedFriendsGameInstance.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedFriendsGameInstance.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedFriendsInterface.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedFriendsInterface.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedFriendsGameInstance.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedFriendsInterface.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedFriendsLibrary.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedFriendsLibrary.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedFriendsLibrary.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedGameSession.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedGameSession.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/BlueprintDataDefinitions.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedExternalUILibrary.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedFriendsGameInstance.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedFriendsGameInstance.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedFriendsInterface.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedFriendsInterface.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedFriendsGameInstance.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedFriendsInterface.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedFriendsLibrary.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedFriendsLibrary.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedFriendsLibrary.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedGameSession.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedGameSession.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/GameModeBase.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Engine/ServerStatReplicator.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine/ServerStatReplicator.generated.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine/GameModeBase.generated.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/GameSession.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine/GameSession.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedGameSession.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedIdentityLibrary.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedIdentityLibrary.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedIdentityLibrary.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedSessions.init.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedSessionsLibrary.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedSessionsLibrary.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedSessionsLibrary.generated.h
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedGameSession.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedIdentityLibrary.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedIdentityLibrary.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedIdentityLibrary.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedSessions.init.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedSessionsLibrary.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedSessionsLibrary.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedSessionsLibrary.generated.h
