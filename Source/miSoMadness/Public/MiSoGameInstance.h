@@ -40,7 +40,7 @@ public:
 		bool isLan;
 	UPROPERTY(BlueprintReadOnly)
 		int32 ping;
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadWrite)
 		bool hasStarted;
 
 	void setPlayerCount()

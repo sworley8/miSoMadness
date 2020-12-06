@@ -8,16 +8,19 @@ APowerUpSpawner::APowerUpSpawner()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
-	PowerUpRespawnTime = 5.0f; //time in seconds to respawn
-	RespawnTimer = 0.0f;
+	if (GetLocalRole() == ROLE_Authority || GetNetMode() == ENetMode::NM_ListenServer) {
 
-	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>("MeshComponent");
-	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/Binaries/3D/CuttingBoard/CuttingBoard.CuttingBoard'")); //i'm thinking like a raised dais for the powerup to hover over, also helps with getting the location
-	StaticMesh->SetStaticMesh(MeshAsset.Object);
-	SetRootComponent(StaticMesh);
+		PowerUpRespawnTime = 5.0f; //time in seconds to respawn
+		RespawnTimer = 0.0f;
 
-	UClass* TempList[] = { APowerUp::StaticClass() }; //replace APowerUp with the desired actor(s) -- always followed by ::StaticClass()
-	PowerUpList.Append(TempList, UE_ARRAY_COUNT(TempList));
+		StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>("MeshComponent");
+		static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/Binaries/3D/CuttingBoard/CuttingBoard.CuttingBoard'")); //i'm thinking like a raised dais for the powerup to hover over, also helps with getting the location
+		StaticMesh->SetStaticMesh(MeshAsset.Object);
+		SetRootComponent(StaticMesh);
+
+		UClass* TempList[] = { APowerUp::StaticClass() }; //replace APowerUp with the desired actor(s) -- always followed by ::StaticClass()
+		PowerUpList.Append(TempList, UE_ARRAY_COUNT(TempList));
+	}
 }
 
 // Called when the game starts or when spawned
@@ -29,14 +32,16 @@ void APowerUpSpawner::BeginPlay()
 // Called every frame
 void APowerUpSpawner::Tick(float DeltaTime)
 {
-	Super::Tick(DeltaTime);
-	if (!IsValid(SpawnedPowerUp)) {
-		RespawnTimer += DeltaTime;
-		if (RespawnTimer > PowerUpRespawnTime)
-		{
-			SpawnRandomPowerUp();
-		}
-	}
+	//if (GetLocalRole() == ROLE_Authority || GetNetMode() == ENetMode::NM_ListenServer) {
+		Super::Tick(DeltaTime);
+		if (!IsValid(SpawnedPowerUp)) {
+			RespawnTimer += DeltaTime;
+			if (RespawnTimer > PowerUpRespawnTime)
+			{
+				SpawnRandomPowerUp();
+			}
+		}	
+	//}
 }
 
 void APowerUpSpawner::SpawnRandomPowerUp()

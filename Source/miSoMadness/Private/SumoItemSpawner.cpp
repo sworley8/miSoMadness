@@ -32,10 +32,12 @@ void ASumoItemSpawner::BeginPlay()
 // Called every frame
 void ASumoItemSpawner::Tick(float DeltaTime)
 {
-	Super::Tick(DeltaTime);SpawnTimer += DeltaTime; //should probably check to make sure there isn't anything in the way first
-	if (SpawnTimer > ItemSpawnTime)
-	{
-		SpawnRandomItem();
+	if (GetNetMode() == ENetMode::NM_ListenServer) {
+		Super::Tick(DeltaTime);SpawnTimer += DeltaTime; //should probably check to make sure there isn't anything in the way first
+		if (SpawnTimer > ItemSpawnTime)
+		{
+			SpawnRandomItem();
+		}
 	}
 }
 
