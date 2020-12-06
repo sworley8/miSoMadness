@@ -1,4 +1,4 @@
-/Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSteamSessions/Module.AdvancedSteamSessions.cpp.o: \
+/Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSteamSessions/Module.AdvancedSteamSessions.cpp.o: \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Public/TextureLayout.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Public/TextureLayout3d.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine/SoundWave.generated.h \
@@ -1257,7 +1257,7 @@
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Core/Public/CoreTypes.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Core/Public/Containers/ContainersFwd.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Public/EngineSharedPCH.h \
-  /Users/swan/VGDEV/miSoMadness/Intermediate/Build/Mac/miSoMadnessEditor/Development/Engine/SharedPCH.Engine.ShadowErrors.h \
+  /Users/swan/miSoMadness/Intermediate/Build/Mac/miSoMadnessEditor/Development/Engine/SharedPCH.Engine.ShadowErrors.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/stddef.h \
@@ -2671,11 +2671,11 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSteamSessions/Module.AdvancedSteamSessions.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSteamSessions/Definitions.AdvancedSteamSessions.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Private/AdvancedSteamFriendsLibrary.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/AdvancedSteamFriendsLibrary.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/BlueprintDataDefinitions.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSteamSessions/Module.AdvancedSteamSessions.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSteamSessions/Definitions.AdvancedSteamSessions.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Private/AdvancedSteamFriendsLibrary.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/AdvancedSteamFriendsLibrary.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/BlueprintDataDefinitions.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerState.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine/PlayerState.generated.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystem/Source/Public/Interfaces/OnlineSessionInterface.h \
@@ -2818,7 +2818,7 @@
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystemUtils/Intermediate/Build/Mac/UE4Editor/Inc/OnlineSubsystemUtils/ShowLoginUICallbackProxy.generated.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystemUtils/Source/OnlineSubsystemUtils/Classes/TurnBasedBlueprintLibrary.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystemUtils/Intermediate/Build/Mac/UE4Editor/Inc/OnlineSubsystemUtils/TurnBasedBlueprintLibrary.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/BlueprintDataDefinitions.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/BlueprintDataDefinitions.generated.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/ThirdParty/Steamworks/Steamv147/sdk/public/steam/steam_api.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/ThirdParty/Steamworks/Steamv147/sdk/public/steam/steam_api_common.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/ThirdParty/Steamworks/Steamv147/sdk/public/steam/steamtypes.h \
@@ -2849,18 +2849,18 @@
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/ThirdParty/Steamworks/Steamv147/sdk/public/steam/isteamvideo.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/ThirdParty/Steamworks/Steamv147/sdk/public/steam/isteamparentalsettings.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/ThirdParty/Steamworks/Steamv147/sdk/public/steam/isteamremoteplay.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSteamSessions/AdvancedSteamFriendsLibrary.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/OnlineSubSystemHeader.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Private/AdvancedSteamSessions.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/AdvancedSteamSessions.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Private/AdvancedSteamWorkshopLibrary.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/AdvancedSteamWorkshopLibrary.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSteamSessions/AdvancedSteamWorkshopLibrary.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Private/SteamRequestGroupOfficersCallbackProxy.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/SteamRequestGroupOfficersCallbackProxy.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSteamSessions/AdvancedSteamFriendsLibrary.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/OnlineSubSystemHeader.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Private/AdvancedSteamSessions.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/AdvancedSteamSessions.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Private/AdvancedSteamWorkshopLibrary.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/AdvancedSteamWorkshopLibrary.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSteamSessions/AdvancedSteamWorkshopLibrary.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Private/SteamRequestGroupOfficersCallbackProxy.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/SteamRequestGroupOfficersCallbackProxy.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystemSteam/Source/Public/OnlineSubsystemSteam.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystemSteam/Source/Public/OnlineSubsystemSteamPackage.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSteamSessions/SteamRequestGroupOfficersCallbackProxy.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Private/SteamWSRequestUGCDetailsCallbackProxy.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/SteamWSRequestUGCDetailsCallbackProxy.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSteamSessions/SteamWSRequestUGCDetailsCallbackProxy.generated.h
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSteamSessions/SteamRequestGroupOfficersCallbackProxy.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Private/SteamWSRequestUGCDetailsCallbackProxy.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Source/AdvancedSteamSessions/Classes/SteamWSRequestUGCDetailsCallbackProxy.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSteamSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSteamSessions/SteamWSRequestUGCDetailsCallbackProxy.generated.h

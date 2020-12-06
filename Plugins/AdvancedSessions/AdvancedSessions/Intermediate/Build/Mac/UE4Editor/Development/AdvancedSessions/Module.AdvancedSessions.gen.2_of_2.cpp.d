@@ -1,4 +1,4 @@
-/Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSessions/Module.AdvancedSessions.gen.2_of_2.cpp.o: \
+/Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSessions/Module.AdvancedSessions.gen.2_of_2.cpp.o: \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Public/TextureLayout.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Public/TextureLayout3d.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine/SoundWave.generated.h \
@@ -1257,7 +1257,7 @@
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Core/Public/CoreTypes.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Core/Public/Containers/ContainersFwd.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Public/EngineSharedPCH.h \
-  /Users/swan/VGDEV/miSoMadness/Intermediate/Build/Mac/miSoMadnessEditor/Development/Engine/SharedPCH.Engine.ShadowErrors.h \
+  /Users/swan/miSoMadness/Intermediate/Build/Mac/miSoMadnessEditor/Development/Engine/SharedPCH.Engine.ShadowErrors.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/stddef.h \
@@ -2671,13 +2671,13 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSessions/Module.AdvancedSessions.gen.2_of_2.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSessions/Definitions.AdvancedSessions.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedVoiceLibrary.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSessions/Module.AdvancedSessions.gen.2_of_2.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Development/AdvancedSessions/Definitions.AdvancedSessions.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedVoiceLibrary.gen.cpp \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/CoreUObject/Public/UObject/GeneratedCppIncludes.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/CoreUObject/Public/UObject/MetaData.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedVoiceLibrary.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/BlueprintDataDefinitions.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/AdvancedVoiceLibrary.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/BlueprintDataDefinitions.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerState.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine/PlayerState.generated.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystem/Source/Public/Interfaces/OnlineSessionInterface.h \
@@ -2820,42 +2820,42 @@
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystemUtils/Intermediate/Build/Mac/UE4Editor/Inc/OnlineSubsystemUtils/ShowLoginUICallbackProxy.generated.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystemUtils/Source/OnlineSubsystemUtils/Classes/TurnBasedBlueprintLibrary.h \
   /Users/Shared/Epic\ Games/UE_4.25/Engine/Plugins/Online/OnlineSubsystemUtils/Intermediate/Build/Mac/UE4Editor/Inc/OnlineSubsystemUtils/TurnBasedBlueprintLibrary.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/BlueprintDataDefinitions.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedVoiceLibrary.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/BlueprintDataDefinitions.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/CancelFindSessionsCallbackProxy.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/CancelFindSessionsCallbackProxy.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/CancelFindSessionsCallbackProxy.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/CreateSessionCallbackProxyAdvanced.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/CreateSessionCallbackProxyAdvanced.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/CreateSessionCallbackProxyAdvanced.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/EndSessionCallbackProxy.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/EndSessionCallbackProxy.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/EndSessionCallbackProxy.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/FindFriendSessionCallbackProxy.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/FindFriendSessionCallbackProxy.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/FindFriendSessionCallbackProxy.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/FindSessionsCallbackProxyAdvanced.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/FindSessionsCallbackProxyAdvanced.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/FindSessionsCallbackProxyAdvanced.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/GetFriendsCallbackProxy.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/GetFriendsCallbackProxy.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/GetFriendsCallbackProxy.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/GetRecentPlayersCallbackProxy.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/GetRecentPlayersCallbackProxy.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/GetRecentPlayersCallbackProxy.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/GetUserPrivilegeCallbackProxy.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/GetUserPrivilegeCallbackProxy.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/GetUserPrivilegeCallbackProxy.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/LoginUserCallbackProxy.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/LoginUserCallbackProxy.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/LoginUserCallbackProxy.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/LogoutUserCallbackProxy.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/LogoutUserCallbackProxy.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/LogoutUserCallbackProxy.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/SendFriendInviteCallbackProxy.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/SendFriendInviteCallbackProxy.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/SendFriendInviteCallbackProxy.generated.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/UpdateSessionCallbackProxyAdvanced.gen.cpp \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/UpdateSessionCallbackProxyAdvanced.h \
-  /Users/swan/VGDEV/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/UpdateSessionCallbackProxyAdvanced.generated.h
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/BlueprintDataDefinitions.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/AdvancedVoiceLibrary.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/BlueprintDataDefinitions.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/CancelFindSessionsCallbackProxy.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/CancelFindSessionsCallbackProxy.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/CancelFindSessionsCallbackProxy.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/CreateSessionCallbackProxyAdvanced.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/CreateSessionCallbackProxyAdvanced.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/CreateSessionCallbackProxyAdvanced.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/EndSessionCallbackProxy.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/EndSessionCallbackProxy.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/EndSessionCallbackProxy.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/FindFriendSessionCallbackProxy.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/FindFriendSessionCallbackProxy.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/FindFriendSessionCallbackProxy.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/FindSessionsCallbackProxyAdvanced.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/FindSessionsCallbackProxyAdvanced.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/FindSessionsCallbackProxyAdvanced.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/GetFriendsCallbackProxy.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/GetFriendsCallbackProxy.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/GetFriendsCallbackProxy.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/GetRecentPlayersCallbackProxy.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/GetRecentPlayersCallbackProxy.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/GetRecentPlayersCallbackProxy.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/GetUserPrivilegeCallbackProxy.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/GetUserPrivilegeCallbackProxy.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/GetUserPrivilegeCallbackProxy.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/LoginUserCallbackProxy.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/LoginUserCallbackProxy.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/LoginUserCallbackProxy.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/LogoutUserCallbackProxy.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/LogoutUserCallbackProxy.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/LogoutUserCallbackProxy.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/SendFriendInviteCallbackProxy.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/SendFriendInviteCallbackProxy.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/SendFriendInviteCallbackProxy.generated.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/UpdateSessionCallbackProxyAdvanced.gen.cpp \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Source/AdvancedSessions/Classes/UpdateSessionCallbackProxyAdvanced.h \
+  /Users/swan/miSoMadness/Plugins/AdvancedSessions/AdvancedSessions/Intermediate/Build/Mac/UE4Editor/Inc/AdvancedSessions/UpdateSessionCallbackProxyAdvanced.generated.h

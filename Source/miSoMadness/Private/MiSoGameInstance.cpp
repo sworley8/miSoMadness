@@ -194,8 +194,7 @@ void UMiSoGameInstance::HostGameStart(FServerInfo serverInfo)
 {
 
 	FOnlineSessionSettings sessionSettings;
-	if (serverInfo.hasStarted)
-	{
+	if (IOnlineSubsystem::Get()->GetSubsystemName() != "NULL" && !serverInfo.isLan) {
 		sessionSettings.bAllowJoinInProgress = false;
 		sessionSettings.bAllowJoinViaPresence = false;
 	}
